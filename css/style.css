@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  color: #783c67;
+  background-color: #f5ecec;
+}
+
+header {
+  background-color: #fbf7f7;
+  padding: 10px 0;
+}
+header a {
+  color: #783c67;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.line {
+  height: 2px;
+  width: 50px;
+  background-color: #783c67;
+  margin: 0 10px;
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  margin: 0;
+}
+
+.hero {
+  position: relative;
+  background-color: #fbf7f7;
+  padding: 240px 0;
+  overflow: hidden;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero p,
+.hero h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.hero p {
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.hero h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+}
+
+.content-container,
+.project-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.projects {
+  background-color: #f5ecec;
+  padding: 50px 0;
+}
+
+.project-card {
+  flex: 0 1 calc(30% - 4px);
+  background-color: #fbf7f7;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img {
+  max-width: 100%;
+  border-radius: 4px;
+  width: 90%;
+  padding: 12px 0;
+}
+
+.project-card p {
+  text-align: left;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  color: #f5ecec;
+  background-color: #783c67;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #3f3b71;
+}
+
+footer {
+  background-color: #f5ecec;
+  padding: 20px 0;
+}
+
+/* media queries */
+
+@media (max-width: 1250px) {
+  .content-container,
+  .project-container {
+    max-width: 1200px;
+    margin: 20px 16px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .content-container,
+  .project-container {
+    max-width: 1200px;
+    margin: 20px 16px;
+    text-align: center;
+  }
+
+  .project-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 80%;
+  }
+}
